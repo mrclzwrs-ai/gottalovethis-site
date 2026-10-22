@@ -121,6 +121,9 @@ section.band+section.band{padding-top:0}
 .tee-txt{background:var(--mat);color:var(--mat-ink);align-content:center;gap:10px}
 .tee-txt .q{font-family:var(--display);font-size:1.05rem;line-height:1.1}
 .tee-txt .q em{display:block;font-style:normal;font-size:.7em;margin-top:4px}
+.tee-txt .q em.top{margin:0 0 2px}
+.tee-txt .q:has(em){font-size:.92rem}
+.tee-txt .q em{line-height:1.05}
 .tee-txt small{font:500 .62rem var(--mono);letter-spacing:.04em;opacity:.75}
 .tee:nth-child(3n+2) .tee-txt .q{color:var(--yellow)}.tee:nth-child(3n+3) .tee-txt .q{color:#ff5a4f}.tee:nth-child(3n+4) .tee-txt .q{color:#5fd07f}
 .more{margin-top:28px;border-top:2px solid var(--ink);padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
@@ -334,7 +337,10 @@ footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);fo
 
   /* Positive Wave: 1 fotovak, 11 tekstvakken (gemaakt op bestelling) */
   var box=document.getElementById("series");
-  var teksten={2:"LET\u2019S DO THIS",3:"AIN\u2019T GOT NO COMPETITION<em>I\u2019M UNIQ</em>"};
+  var teksten={2:"LET\u2019S DO THIS",3:"AIN\u2019T GOT NO COMPETITION<em>I\u2019M UNIQ</em>",
+    4:"YOU GOT THIS",5:"FOCUS",6:"MAKE IT HAPPEN",7:"LET\u2019S GET IT",
+    8:"<em class=\"top\">DO WHAT YOU</em>LOVE<em>WHAT YOU DO</em>",9:"GO GET IT",10:"KEEP ON GOING",11:"MOTIVA BO MES",12:"NEVER GIVE UP"};
+  /* bewaard voor later (12 selfmotivation list van Cock): TRUST THE PROCESS, EN DOOR. JUST DO IT bewust niet (slogan van Nike) */
   for(var i=1;i<=12;i++){
     var n=(i<10?"0":"")+i, d=document.createElement("figure");
     if(i===1){

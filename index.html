@@ -117,6 +117,7 @@ section.band+section.band{padding-top:0}
 .sig span{font:500 .95rem var(--mono);border-bottom:3px solid var(--yellow);padding-bottom:1px;white-space:nowrap}
 .tee-img,.tee-txt{aspect-ratio:1/1;max-width:100%;border-radius:8px;display:grid;place-items:center;text-align:center;padding:10px}
 .tee-img{border:2px dashed var(--line);color:var(--muted);font-size:.85rem}
+.tee-img.has{border:0;padding:0;overflow:hidden}.tee-img.has img{width:100%;height:100%;object-fit:cover;display:block}
 .tee-txt{background:var(--mat);color:var(--mat-ink);align-content:center;gap:10px}
 .tee-txt .q{font-family:var(--display);font-size:1.05rem;line-height:1.1}
 .tee-txt small{font:500 .62rem var(--mono);letter-spacing:.04em;opacity:.75}
@@ -336,7 +337,7 @@ footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);fo
     var n=(i<10?"0":"")+i, d=document.createElement("figure");
     if(i===1){
       d.className="tee photo";
-      d.innerHTML='<div class="tee-img"><span>Foto van het eerste shirt</span></div><b>WAVE #01</b><span>Foto volgt</span>';
+      d.innerHTML='<div class="tee-img has"><img src="foto/one-in-a-million.jpg" alt="Zwarte jas met witte letters One in a Million" loading="lazy"></div><b>WAVE #01</b><span>One in a Million</span>';
     }else{
       d.className="tee txt";
       d.innerHTML='<div class="tee-txt"><span class="q">Tekst volgt</span><small>signed by Good Vibe</small></div><b>WAVE #'+n+'</b><span>Op bestelling</span>';
